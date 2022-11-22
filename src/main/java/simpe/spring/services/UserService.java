@@ -17,11 +17,11 @@ public class UserService {
         return this.userRepository.findAll();
     }
 
-    public Optional<User> getById(Long id) {
-        return this.userRepository.findById(id);
+    public Optional<User> getUserByFirstName(String firstName) {
+        return this.userRepository.findByFirstName(firstName);
     }
 
-    public void save(String fistName, String lastName) {
-        this.userRepository.save(new User(fistName, lastName));
+    public void save(User user) {
+        this.userRepository.save(user);
     }
 }
